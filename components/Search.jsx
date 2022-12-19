@@ -55,14 +55,14 @@ const Search = () => {
         </div>
             {/* <h1 className="text-center font-semibold mb-12" >Movies</h1> */}
            
-            <div className="w-full h-44 grid sm:grid-cols-2  md:grid-cols-3 xl:grid-cols-5 " >
+            <div className="w-full h-44 grid sm:grid-cols-2  md:grid-cols-3 xl:grid-cols-5 px-10" >
                 {
                     popularMovies.filter((movie) => {
                         return search.toLowerCase() === ''
                         ? movie 
                         : movie.title.toLowerCase().includes(search.toLowerCase())
                     }).map((movie) => (
-                        <div className="flex flex-col px-3 hover:scale-105 duration-300 gap-3 hover:shadow-gray-600 hover:shadow-md py-3 rounded-md cursor-pointer"
+                        <div className="flex flex-col px-3 hover:scale-105 duration-300 gap-3 hover:shadow-gray-600 hover:shadow-md py-3 rounded-md cursor-pointer hover:bg-gray-600/20"
                             onClick={() => toggleMovie(movie)} >
                             <h4 className="flex justify-center font-semibold font-lora text-lg lg:text-2xl items-center mt-2 py-2 " >
                                 {movie?.title}
