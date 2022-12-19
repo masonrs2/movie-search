@@ -16,13 +16,14 @@ const Search = () => {
         toggle ? setToggle(false) : setToggle(true)
     }
 
-    const api = "6259a38ecc880ab73db793a33df58313";
-    const url = "https://api.themoviedb.org/3/movie/popular?api_key=6259a38ecc880ab73db793a33df58313&language=en-US&page=1"
+    const popularUrl = "https://api.themoviedb.org/3/movie/popular?api_key=6259a38ecc880ab73db793a33df58313&language=en-US&page=1"
+
+    const latestUrl = "https://api.themoviedb.org/3/movie/top_rated?api_key=6259a38ecc880ab73db793a33df58313&language=en-US&page=1"
+    
 
     const fetchPopular = async () => {
-        const data = await fetch(url);
-        const movies = await data.json();
-        console.log(movies)
+        let data = await fetch(popularUrl);
+        let movies = await data.json();
         setPopularMovies(movies.results)
     }
 
