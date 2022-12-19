@@ -54,7 +54,7 @@ const Search = () => {
         </div>
             {/* <h1 className="text-center font-semibold mb-12" >Movies</h1> */}
            
-            <div className="w-full h-44 grid  md:grid-cols-3 xl:grid-cols-5 " >
+            <div className="w-full h-44 grid sm:grid-cols-2  md:grid-cols-3 xl:grid-cols-5 " >
                 {
                     popularMovies.filter((movie) => {
                         return search.toLowerCase() === ''
